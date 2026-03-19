@@ -1,0 +1,38 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products Gallery",
+    "contact": "Contact Us",
+    "admin": "Admin Panel"
+  },
+  "Home": {
+    "heroTitle": "Premium FMCG Wholesale Suppliers",
+    "heroSubtitle": "Reliable supply chain solutions for dark stores and quick commerce.",
+    "featuredBrands": "Brands We Supply",
+    "featuredProducts": "Featured Products"
+  },
+  "About": {
+    "title": "About Our Company",
+    "history": "Company History",
+    "historyText": "Established to bridge the gap in rapid FMCG distribution.",
+    "vision": "Our Vision",
+    "visionText": "To be the backbone of quick commerce supply chains globally.",
+    "mission": "Our Mission",
+    "missionText": "Delivering high-quality imported goods with unmatched reliability."
+  },
+  "Products": {
+    "title": "Product Gallery",
+    "searchPlaceholder": "Search products...",
+    "category": "Category",
+    "noPrices": "Contact us for wholesale pricing"
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "name": "Full Name",
+    "company": "Company Name",
+    "email": "Email Address",
+    "message": "Message / RFQ",
+    "submit": "Send Inquiry"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "fmcg-b2b-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@prisma/client": "^5.16.1",
+    "framer-motion": "^11.2.10",
+    "lucide-react": "^0.400.0",
+    "next": "14.2.5",
+    "next-auth": "5.0.0-beta.19",
+    "next-intl": "^3.15.0",
+    "prisma": "^5.16.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.52.1",
+    "zod": "^3.23.8",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.39",
+    "autoprefixer": "^10.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "typescript": "^5",
+    "ts-node": "^10.9.2"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} prisma/seed.ts"
+  }
+}

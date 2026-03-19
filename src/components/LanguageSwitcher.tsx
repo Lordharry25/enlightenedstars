@@ -1,0 +1,47 @@
+'use client';
+
+import { usePathname, useRouter } from 'next/navigation';
+import { useLocale } from 'next-intl';
+
+export default function LanguageSwitcher() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const locale = useLocale();
+
+  const handleLocaleChange = (newLocale: string) => {
+    if (newLocale === locale) return;
+    
+    // next-intl middleware uses /en/path or /ar/path
+    // If pathname is /en/about, replacing /en with /ar gives /ar/about
+    const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
+    
+    // If pathname is just "/" (handled by middleware but visually might not have locale),
+    // next-intl usually redirects cleanly, but it's safe to just push the new path.
+    router.push(newPathname === pathname ? `/${newLocale}${pathname}` : newPathname);
+  };
+
+  return (
+    <div className="flex items-center gap-2">
+      <button
+        onClick={() => handleLocaleChange('en')}
+        className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+          locale === 'en'
+            ? 'bg-primary text-white'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+        }`}
+      >
+        EN
+      </button>
+      <button
+        onClick={() => handleLocaleChange('ar')}
+        className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+          locale === 'ar'
+            ? 'bg-primary text-white'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+        }`}
+      >
+        عربي
+      </button>
+    </div>
+  );
+}
