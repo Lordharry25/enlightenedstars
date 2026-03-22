@@ -23,7 +23,7 @@ async function main() {
         description_en: 'High-quality spray-dried instant coffee. Shelf life: 24 months. Packaging: Glass Jar. Ideal for quick commerce distribution and office pantry supplies.',
         description_ar: 'قهوة سريعة التحضير عالية الجودة المجففة بالرذاذ. مدة الصلاحية: 24 شهرًا. التعبئة: وعاء زجاجي. مثالية للتوزيع السريع.',
         category: 'Beverages',
-        imageUrl: '/products/coffee.png'
+        imageUrl: 'https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=800&auto=format&fit=crop'
       },
       {
         name_en: 'Whole Wheat Pasta 5kg',
@@ -31,7 +31,7 @@ async function main() {
         description_en: 'Bulk packaged whole wheat penne pasta. Shelf life: 18 months. High protein content suitable for HORECA and retail FMCG distribution.',
         description_ar: 'مكرونة بيني من القمح الكامل معبأة بالجملة. مدة الصلاحية: 18 شهرًا. محتوى عالي من البروتين مناسب لقطاع الفنادق والمطاعم والمقاهي والتجزئة.',
         category: 'Pantry',
-        imageUrl: '/products/pasta.png'
+        imageUrl: 'https://images.unsplash.com/photo-1621996316564-42f1f0088566?q=80&w=800&auto=format&fit=crop'
       },
       {
         name_en: 'Organic Extra Virgin Olive Oil 5L',
@@ -39,7 +39,7 @@ async function main() {
         description_en: 'Cold-pressed extra virgin olive oil. Tin packaging for extended shelf life of 24 months. Pallet quantity: 150 tins.',
         description_ar: 'زيت زيتون بكر ممتاز معصور على البارد. عبوة صفيح لإطالة مدة الصلاحية حتى 24 شهرًا. كمية البليت: 150 عبوة.',
         category: 'Oils & Condiments',
-        imageUrl: '/products/olive-oil.png'
+        imageUrl: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=800&auto=format&fit=crop'
       },
       {
         name_en: 'Almond Milk Unsweetened 1L (Case of 12)',
@@ -47,7 +47,7 @@ async function main() {
         description_en: 'UHT Almond milk carton. Shelf life: 12 months ambient. High demand in dark stores for quick delivery. 12x1L per case.',
         description_ar: 'كرتونة حليب لوز طويل الأجل. مدة الصلاحية: 12 شهرًا في درجة حرارة الغرفة. 12×1 لتر لكل كرتونة.',
         category: 'Dairy Alternatives',
-        imageUrl: '/products/almond-milk.png'
+        imageUrl: 'https://images.unsplash.com/photo-1563636619-e9143da7973b?q=80&w=800&auto=format&fit=crop'
       },
       {
         name_en: 'Baby Diapers Size 4 (Jumbo Pack - 80pcs)',
@@ -55,7 +55,7 @@ async function main() {
         description_en: 'Ultra-absorbent baby diapers. Bale contains 4 packs. Shelf life: 36 months. Top moving category in rapid delivery.',
         description_ar: 'حفاضات أطفال فائقة الامتصاص. تحتوي الرزمة على 4 عبوات. مدة الصلاحية: 36 شهرًا.',
         category: 'Personal Care',
-        imageUrl: '/products/diapers.png'
+        imageUrl: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=800&auto=format&fit=crop'
       },
       {
         name_en: 'Laundry Detergent Pods (Pack of 45)',
@@ -63,7 +63,7 @@ async function main() {
         description_en: 'Concentrated 3-in-1 laundry capsules. Packaging: Child-lock tub. Case of 6 tubs. High retention FMCG item.',
         description_ar: 'كبسولات غسيل مركزة 3 في 1. التعبئة والتغليف: حوض محكم الغلق. كرتونة من 6 أحواض.',
         category: 'Home Care',
-        imageUrl: '/products/detergent.png'
+        imageUrl: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=800&auto=format&fit=crop'
       },
       {
         name_en: 'Basmati Rice Premium 10kg',
@@ -71,7 +71,7 @@ async function main() {
         description_en: 'Long grain XXL Basmati rice. Jute bag packaging. Shelf life: 24 months. Sourced directly from farms.',
         description_ar: 'أرز بسمتي طويل الحبة. تعبئة أكياس خيش. مدة الصلاحية: 24 شهرًا. مصدره المزارع مباشرة.',
         category: 'Pantry',
-        imageUrl: '/products/rice.png'
+        imageUrl: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=800&auto=format&fit=crop'
       },
       {
         name_en: 'Tomato Ketchup 5kg Jerry Can',
@@ -79,7 +79,7 @@ async function main() {
         description_en: 'Thick Grade A tomato ketchup. HORECA pack. Shelf life: 12 months. Packed in secure jerry cans.',
         description_ar: 'كاتشب طماطم سميك من الدرجة الأولى. عبوة للمطاعم. مدة الصلاحية: 12 شهرًا.',
         category: 'Condiments',
-        imageUrl: '/products/ketchup.png'
+        imageUrl: 'https://images.unsplash.com/photo-1607305922338-bb451f2803b0?q=80&w=800&auto=format&fit=crop'
       },
       {
         name_en: 'Bottled Mineral Water 500ml (Case of 24)',
@@ -87,7 +87,7 @@ async function main() {
         description_en: 'Natural mineral water in PET bottles. Fast-moving consumer good. Shelf life: 12 months. Essential for dark store stock.',
         description_ar: 'مياه معدنية طبيعية في عبوات بلاستيكية. سلعة استهلاكية سريعة التداول. مدة الصلاحية: 12 شهرًا.',
         category: 'Beverages',
-        imageUrl: '/products/water.png'
+        imageUrl: 'https://images.unsplash.com/photo-1523362628487-79b8823f95f4?q=80&w=800&auto=format&fit=crop'
       },
       {
         name_en: 'Dark Chocolate Bar 70% Cacao 100g (Box of 20)',
@@ -95,7 +95,7 @@ async function main() {
         description_en: 'Premium dark chocolate bars. Temperature controlled logistics required. Shelf life: 12 months.',
         description_ar: 'ألواح شوكولاتة داكنة ممتازة. يتطلب لوجستيات يتم التحكم في درجة حرارتها. مدة الصلاحية: 12 شهرًا.',
         category: 'Snacks & Confectionery',
-        imageUrl: '/products/chocolate.png'
+        imageUrl: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=800&auto=format&fit=crop'
       }
     ]
   });

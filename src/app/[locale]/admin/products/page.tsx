@@ -2,6 +2,8 @@ import prisma from '../../../../lib/prisma';
 import { deleteProduct } from '../../../../actions/admin';
 import { Plus, Trash2, Edit } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { blurPlaceholder } from '../../../../utils/imageLoader';
 
 export default async function AdminProductsPage({ params: { locale } }: { params: { locale: string } }) {
   const products = await prisma.product.findMany({ orderBy: { createdAt: 'desc' } });
@@ -29,8 +31,16 @@ export default async function AdminProductsPage({ params: { locale } }: { params
             {products.map(p => (
               <tr key={p.id} className="hover:bg-gray-50 transition-colors">
                 <td className="py-4 px-6">
-                  <div className="w-14 h-14 bg-white rounded-lg border border-gray-100 p-1 flex items-center justify-center">
-                    <img src={p.imageUrl} alt="" className="max-w-full max-h-full object-contain" />
+                  <div className="relative w-14 h-14 bg-white rounded-lg border border-gray-100 p-1 flex items-center justify-center overflow-hidden">
+                    <Image 
+                      src={p.imageUrl} 
+                      alt={p.name_en}
+                      fill
+                      sizes="56px"
+                      placeholder="blur"
+                      blurDataURL={blurPlaceholder}
+                      className="object-contain p-1"
+                    />
                   </div>
                 </td>
                 <td className="py-4 px-6 font-bold text-gray-900">{p.name_en}</td>
