@@ -2,8 +2,6 @@
 
 import prisma from '../lib/prisma';
 import { revalidatePath } from 'next/cache';
-import fs from 'fs/promises';
-import path from 'path';
 
 export async function deleteProduct(id: string) {
   await prisma.product.delete({ where: { id } });
@@ -25,15 +23,13 @@ export async function saveProduct(formData: FormData) {
   let imageUrl = formData.get('imageUrl') as string;
   const imageFile = formData.get('imageFile') as File | null;
   
-  // Handing the raw multipart/form-data payload directly into public system
+  // Convert file directly to base64
   if (imageFile && imageFile.size > 0) {
     const bytes = await imageFile.arrayBuffer();
     const buffer = Buffer.from(bytes);
-    const filename = `${Date.now()}-${imageFile.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
-    const uploadPath = path.join(process.cwd(), 'public/products', filename);
-    await fs.mkdir(path.join(process.cwd(), 'public/products'), { recursive: true });
-    await fs.writeFile(uploadPath, buffer);
-    imageUrl = `/products/${filename}`;
+    const mimeType = imageFile.type || 'image/jpeg';
+    const base64Data = buffer.toString('base64');
+    imageUrl = `data:${mimeType};base64,${base64Data}`;
   }
 
   const data = {
@@ -63,15 +59,13 @@ export async function saveBrand(formData: FormData) {
   let logoUrl = formData.get('logoUrl') as string;
   const logoFile = formData.get('logoFile') as File | null;
 
-  // Save the brand logo file automatically
+  // Convert the brand logo file directly to base64
   if (logoFile && logoFile.size > 0) {
     const bytes = await logoFile.arrayBuffer();
     const buffer = Buffer.from(bytes);
-    const filename = `${Date.now()}-${logoFile.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
-    const uploadPath = path.join(process.cwd(), 'public/logos', filename);
-    await fs.mkdir(path.join(process.cwd(), 'public/logos'), { recursive: true });
-    await fs.writeFile(uploadPath, buffer);
-    logoUrl = `/logos/${filename}`;
+    const mimeType = logoFile.type || 'image/png';
+    const base64Data = buffer.toString('base64');
+    logoUrl = `data:${mimeType};base64,${base64Data}`;
   }
 
   const data = {
