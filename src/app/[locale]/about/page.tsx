@@ -24,7 +24,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
             <Building2 className="w-10 h-10 text-secondary" />
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg tracking-tight">{t('title')}</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed font-medium">
+          <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed font-medium whitespace-pre-wrap">
             {t('subtitle')}
           </p>
         </div>
@@ -44,7 +44,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">{t('history')}</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">{t('historyText')} {t('historyExtra')}</p>
+                  <p className="text-gray-600 leading-relaxed text-lg whitespace-pre-wrap">{t('historyText')}</p>
                 </div>
               </div>
 
@@ -56,7 +56,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">{t('vision')}</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">{t('visionText')}</p>
+                  <p className="text-gray-600 leading-relaxed text-lg whitespace-pre-wrap">{t('visionText')}</p>
                 </div>
               </div>
 
@@ -68,7 +68,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">{t('mission')}</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">{t('missionText')}</p>
+                  <p className="text-gray-600 leading-relaxed text-lg whitespace-pre-wrap">{t('missionText')}</p>
                 </div>
               </div>
             </div>

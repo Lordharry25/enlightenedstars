@@ -74,7 +74,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                    </div>
                    <div>
                      <h4 className="font-bold text-lg mb-1">{t('hqTitle')}</h4>
-                     <p className="text-gray-400 leading-relaxed">123 Logistics Park, JAFZA<br/>Dubai, United Arab Emirates</p>
+                     <p className="text-gray-400 leading-relaxed whitespace-pre-wrap">{t('hqDetails')}</p>
                    </div>
                  </div>
 
@@ -84,7 +84,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                    </div>
                    <div>
                      <h4 className="font-bold text-lg mb-1">{t('salesTitle')}</h4>
-                     <p className="text-gray-400 leading-relaxed">+971 4 123 4567<br/>+971 50 987 6543</p>
+                     <p className="text-gray-400 leading-relaxed whitespace-pre-wrap">{t('phoneDetails')}</p>
                    </div>
                  </div>
 
@@ -94,7 +94,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                    </div>
                    <div>
                      <h4 className="font-bold text-lg mb-1">{t('emailTitle')}</h4>
-                     <p className="text-gray-400 leading-relaxed">b2b-sales@enlightenedstars.com<br/>support@enlightenedstars.com</p>
+                     <p className="text-gray-400 leading-relaxed whitespace-pre-wrap">{t('emailDetails')}</p>
                    </div>
                  </div>
                </div>

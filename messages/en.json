@@ -18,14 +18,13 @@
   },
   "About": {
     "title": "About Our Company",
-    "subtitle": "We are building the future of smart FMCG distribution, connecting global manufacturers to local B2B markets with ultimate efficiency.",
+    "subtitle": "Enlightened Stars is a growing supply and distribution company operating in the quick commerce sector in Saudi Arabia. We specialize in supplying dark stores and rapid-delivery platforms with high-demand FMCG products, ensuring that everyday essentials reach customers quickly and reliably.\n\nIn addition to local sourcing, imported products are a core part of our business. We work with international manufacturers and suppliers to introduce high-quality products to the Saudi market, helping retailers and digital marketplaces offer a diverse and competitive product assortment.\n\nOur company collaborates with leading delivery platforms and digital marketplaces, providing consistent inventory supply, efficient logistics, and dependable sourcing solutions. Through strong relationships with manufacturers, distributors, and global suppliers, we ensure a smooth and reliable supply chain for modern retail operations.",
     "history": "Company History",
-    "historyText": "Established to bridge the gap in rapid FMCG distribution.",
-    "historyExtra": "Through scalable global sourcing and highly optimized logistics, we consistently deliver top tier products exactly when you need them.",
+    "historyText": "Enlightened Stars was established to support the rapidly expanding quick-commerce ecosystem in Saudi Arabia. As demand for fast delivery services and dark store operations grew, the need for reliable supply partners became increasingly important.\n\nThe company began by building strong relationships with local distributors and gradually expanded its sourcing network to include international suppliers and imported product lines. This approach allowed Enlightened Stars to provide a broader product range while maintaining consistent availability for quick-commerce platforms.\n\nOver time, the company has strengthened its operational capabilities, expanded its supplier network, and positioned itself as a dependable partner within the fast-growing on-demand retail industry.",
     "vision": "Our Vision",
-    "visionText": "To be the backbone of quick commerce supply chains globally.",
+    "visionText": "Our vision is to become a trusted and leading supply partner in the quick-commerce industry, connecting global and local product sources with modern retail platforms across Saudi Arabia.\n\nWe aim to support the future of digital retail by ensuring that high-quality products—both locally sourced and internationally imported—are easily accessible through efficient and reliable supply networks.",
     "mission": "Our Mission",
-    "missionText": "Delivering high-quality imported goods with unmatched reliability.",
+    "missionText": "Our mission is to provide reliable, efficient, and scalable supply solutions for quick-commerce platforms and dark stores while expanding access to high-quality imported and locally sourced products.\n\nWe strive to:\n• Ensure consistent product availability for rapid delivery platforms\n• Introduce unique and high-quality imported products to the Saudi market\n• Build strong partnerships with manufacturers, distributors, and global suppliers\n• Maintain efficient logistics and supply chain operations\n• Support the continued growth of on-demand retail and quick-commerce ecosystems\n\nThrough trusted partnerships, operational efficiency, and global sourcing, Enlightened Stars aims to deliver lasting value to partners and customers across the supply chain.",
     "yearsLabel": "Years of Excellence"
   },
   "Products": {
@@ -55,8 +54,11 @@
     "companyPlaceholder": "Acme Corp",
     "messagePlaceholder": "How can we help you? RFQ details...",
     "hqTitle": "Headquarters & Warehouses",
+    "hqDetails": "123 Logistics Park, JAFZA\nDubai, United Arab Emirates",
     "salesTitle": "Sales & Support",
-    "emailTitle": "Email Addresses"
+    "phoneDetails": "Mobile: 0597832290\nSyed Safeer - Commercial Director",
+    "emailTitle": "Email Addresses",
+    "emailDetails": "Safeer@enlightenedstars.com"
   },
   "Footer": {
     "description": "Leading B2B FMCG supplier globally. We deliver high-quality products to empower your business.",
