@@ -3,20 +3,19 @@
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { useTransition, useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
-import { useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 export default function ProductFilters({ categories }: { categories: string[] }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  const locale = useLocale();
+  const t = useTranslations('Products');
   const [isPending, startTransition] = useTransition();
 
   const currentCategory = searchParams.get('category') || 'All';
   const initialQuery = searchParams.get('q') || '';
   const [query, setQuery] = useState(initialQuery);
 
-  // Sync state with URL if user uses browser back/forward buttons
   useEffect(() => {
     setQuery(initialQuery);
   }, [initialQuery]);
@@ -45,7 +44,7 @@ export default function ProductFilters({ categories }: { categories: string[] })
           onClick={() => updateFilters('All', query)}
           className={`px-5 py-2.5 rounded-full whitespace-nowrap text-sm font-semibold transition-all ${currentCategory === 'All' ? 'bg-primary text-white shadow-md' : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white border border-gray-600'}`}
         >
-          {locale === 'ar' ? 'الكل' : 'All Categories'}
+          {t('allCategories')}
         </button>
         {categories.map(c => (
           <button 
@@ -70,13 +69,13 @@ export default function ProductFilters({ categories }: { categories: string[] })
             if (e.key === 'Enter') updateFilters(currentCategory, query);
           }}
           className="block w-full ps-11 pe-24 py-3 border border-gray-600 rounded-full leading-5 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary sm:text-sm transition-all shadow-inner focus:bg-gray-600"
-          placeholder={locale === 'ar' ? 'البحث عن المنتجات...' : 'Search B2B products...'}
+          placeholder={t('searchPlaceholder')}
         />
         <button 
           onClick={() => updateFilters(currentCategory, query)}
           className="absolute inset-y-1 end-1 px-5 text-sm font-semibold text-white bg-primary rounded-full hover:bg-blue-800 transition-all shadow-sm"
         >
-          {isPending ? '...' : (locale === 'ar' ? 'بحث' : 'Search')}
+          {isPending ? '...' : t('search')}
         </button>
       </div>
     </div>

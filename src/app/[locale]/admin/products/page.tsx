@@ -1,12 +1,21 @@
 import prisma from '../../../../lib/prisma';
 import { deleteProduct } from '../../../../actions/admin';
-import { Plus, Trash2, Edit } from 'lucide-react';
+import { Plus, Edit } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { blurPlaceholder } from '../../../../utils/imageLoader';
+import DeleteButton from '../../../../components/DeleteButton';
 
 export default async function AdminProductsPage({ params: { locale } }: { params: { locale: string } }) {
-  const products = await prisma.product.findMany({ orderBy: { createdAt: 'desc' } });
+  const products = await prisma.product.findMany({ 
+    orderBy: { createdAt: 'desc' },
+    select: {
+      id: true,
+      name_en: true,
+      category: true,
+      imageUrl: true,
+    }
+  });
 
   return (
     <div>
@@ -50,9 +59,10 @@ export default async function AdminProductsPage({ params: { locale } }: { params
                 <td className="py-4 px-6">
                   <div className="flex justify-end gap-2 text-end h-full">
                     <Link href={`/${locale}/admin/products/${p.id}`} className="p-2 text-gray-400 hover:text-primary hover:bg-blue-50 rounded-lg transition-all"><Edit className="w-5 h-5" /></Link>
-                    <form action={async () => { 'use server'; await deleteProduct(p.id); }}>
-                      <button className="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all"><Trash2 className="w-5 h-5" /></button>
-                    </form>
+                    <DeleteButton 
+                      action={async () => { 'use server'; await deleteProduct(p.id); }}
+                      itemName={p.name_en}
+                    />
                   </div>
                 </td>
               </tr>

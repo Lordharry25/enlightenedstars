@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ShoppingBag } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { blurPlaceholder } from '../utils/imageLoader';
 
 const containerVariants = {
@@ -25,6 +26,7 @@ const itemVariants = {
 };
 
 export default function FeaturedProductsClient({ products, title, locale }: { products: any[], title: string, locale: string }) {
+  const t = useTranslations('Home');
   if (!products || products.length === 0) return null;
 
   return (
@@ -65,7 +67,6 @@ export default function FeaturedProductsClient({ products, title, locale }: { pr
                   blurDataURL={blurPlaceholder}
                   className="object-contain p-4 group-hover:scale-110 transition-transform duration-700 ease-in-out"
                 />
-                {/* Simulated Soft Glow behind the image */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
               <div className="p-6 flex flex-col flex-grow z-10">
@@ -78,10 +79,10 @@ export default function FeaturedProductsClient({ products, title, locale }: { pr
                 </p>
                 <div className="mt-auto pt-4 border-t border-gray-700 flex items-center justify-between">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-1.5 bg-gray-700/50 px-3 py-1 rounded-full">
-                    <ShoppingBag className="w-4 h-4"/> B2B Only
+                    <ShoppingBag className="w-4 h-4"/> {t('b2bOnly')}
                   </span>
                   <a href={`/${locale}/products`} className="text-primary font-semibold hover:underline text-sm flex items-center gap-1 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform">
-                    {locale === 'ar' ? 'عرض التفاصيل' : 'View Details'}
+                    {t('viewDetails')}
                   </a>
                 </div>
               </div>
@@ -97,11 +98,10 @@ export default function FeaturedProductsClient({ products, title, locale }: { pr
           className="mt-16 text-center"
         >
           <a href={`/${locale}/products`} className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white shadow-sm hover:shadow-lg font-semibold py-3 px-8 rounded-full transition-all duration-300">
-            {locale === 'ar' ? 'عرض جميع المنتجات' : 'View All Products'}
+            {t('viewAll')}
           </a>
         </motion.div>
       </div>
     </section>
   );
 }
-
