@@ -39,7 +39,7 @@ export default function HeroClient({ locale }: { locale: string }) {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <a href={`/${locale}/products`} className="inline-block bg-primary hover:bg-blue-800 text-white text-lg font-semibold py-4 px-10 rounded-full transition-all hover:shadow-xl hover:shadow-primary/30 transform hover:-translate-y-1">
-            {locale === 'ar' ? 'استكشف منتجاتنا' : 'Explore Our Products'}
+            {t('exploreCta')}
           </a>
         </motion.div>
       </div>

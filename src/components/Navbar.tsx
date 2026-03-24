@@ -2,19 +2,20 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Menu, X, Building2 } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const locale = useLocale();
+  const t = useTranslations('Navigation');
 
   const navLinks = [
-    { href: `/${locale}`, label: locale === 'ar' ? 'الرئيسية' : 'Home' },
-    { href: `/${locale}/products`, label: locale === 'ar' ? 'المنتجات' : 'Products' },
-    { href: `/${locale}/about`, label: locale === 'ar' ? 'معلومات عنا' : 'About Us' },
-    { href: `/${locale}/contact`, label: locale === 'ar' ? 'اتصل بنا' : 'Contact Us' },
+    { href: `/${locale}`, label: t('home') },
+    { href: `/${locale}/products`, label: t('products') },
+    { href: `/${locale}/about`, label: t('about') },
+    { href: `/${locale}/contact`, label: t('contact') },
   ];
 
   return (
@@ -24,7 +25,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href={`/${locale}`} className="flex items-center gap-2">
               <Building2 className="h-8 w-8 text-primary" />
-              <span className="font-bold text-xl text-primary uppercase tracking-wider hidden sm:block">Antigravity</span>
+              <span className="font-bold text-xl text-primary uppercase tracking-wider hidden sm:block">EnlightenedStars</span>
             </Link>
           </div>
           

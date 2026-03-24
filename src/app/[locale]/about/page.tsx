@@ -1,5 +1,15 @@
 import { getTranslations } from 'next-intl/server';
 import { Building2, Globe, Target, Award } from 'lucide-react';
+import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'About' });
+  return {
+    title: t('title'),
+    description: t('subtitle'),
+  };
+}
 
 export default async function AboutPage({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations('About');
@@ -15,7 +25,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg tracking-tight">{t('title')}</h1>
           <p className="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed font-medium">
-            {locale === 'ar' ? 'نبني مستقبل التوزيع الذكي للسلع الاستهلاكية، لربط المصنعين العالميين بالأسواق المحلية بأعلى كفاءة.' : 'We are building the future of smart FMCG distribution, connecting global manufacturers to local B2B markets with ultimate efficiency.'}
+            {t('subtitle')}
           </p>
         </div>
       </section>
@@ -34,7 +44,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">{t('history')}</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">{t('historyText')} {locale === 'en' ? 'Through scalable global sourcing and highly optimized logistics, we consistently deliver top tier products exactly when you need them.' : 'من خلال التوريد العالمي القابل للتطوير واللوجستيات عالية التحسين، نقدم باستمرار منتجات من الدرجة الأولى في الوقت الذي تحتاجه فيه بالضبط.'}</p>
+                  <p className="text-gray-600 leading-relaxed text-lg">{t('historyText')} {t('historyExtra')}</p>
                 </div>
               </div>
 
@@ -64,16 +74,18 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
             </div>
 
             <div className="hidden lg:block">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl group border border-gray-100">
-                <img 
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl group border border-gray-100 h-[700px]">
+                <Image 
                   src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=3000&auto=format&fit=crop" 
                   alt="Logistics Operations" 
-                  className="w-full h-[700px] object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out"
+                  fill
+                  sizes="(max-width: 1024px) 0vw, 50vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-90" />
                 <div className="absolute bottom-0 start-0 p-10">
                   <div className="text-secondary font-black text-6xl mb-3">10+</div>
-                  <div className="text-white uppercase tracking-widest text-lg font-bold">{locale === 'ar' ? 'سنوات من الخبرة' : 'Years of Excellence'}</div>
+                  <div className="text-white uppercase tracking-widest text-lg font-bold">{t('yearsLabel')}</div>
                 </div>
               </div>
             </div>

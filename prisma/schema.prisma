@@ -14,7 +14,7 @@ model Product {
   description_en String   @db.Text
   description_ar String   @db.Text
   category       String
-  imageUrl       String
+  imageUrl       String   @db.LongText
   isVisible      Boolean  @default(true)
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
@@ -23,7 +23,7 @@ model Product {
 model BrandLogo {
   id         String   @id @default(uuid())
   brandName  String
-  logoUrl    String
+  logoUrl    String   @db.LongText
   isVisible  Boolean  @default(true)
   orderIndex Int      @default(0)
 }

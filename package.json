@@ -12,19 +12,21 @@
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@prisma/client": "^5.16.1",
+    "@types/bcryptjs": "^2.4.6",
+    "autoprefixer": "^10.4.19",
+    "bcryptjs": "^3.0.3",
     "framer-motion": "^11.2.10",
     "lucide-react": "^0.400.0",
     "next": "14.2.5",
     "next-auth": "5.0.0-beta.19",
     "next-intl": "^3.15.0",
+    "postcss": "^8.4.39",
     "prisma": "^5.16.1",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.1",
-    "zod": "^3.23.8",
     "tailwindcss": "^3.4.1",
-    "postcss": "^8.4.39",
-    "autoprefixer": "^10.4.19"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -32,10 +34,10 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
-    "typescript": "^5",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
   },
   "prisma": {
-    "seed": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} prisma/seed.ts"
+    "seed": "npx tsx prisma/seed.ts"
   }
 }

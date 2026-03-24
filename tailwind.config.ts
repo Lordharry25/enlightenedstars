@@ -15,6 +15,8 @@ const config: Config = {
       animation: {
         marquee: 'marquee 35s linear infinite',
         'marquee-rtl': 'marquee-rtl 35s linear infinite',
+        fadeInUp: 'fadeInUp 0.6s ease-out forwards',
+        gradient: 'gradient 3s ease infinite',
       },
       keyframes: {
         marquee: {
@@ -24,7 +26,15 @@ const config: Config = {
         'marquee-rtl': {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(50%)' },
-        }
+        },
+        fadeInUp: {
+          from: { opacity: '0', transform: 'translateY(20px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
       }
     },
   },

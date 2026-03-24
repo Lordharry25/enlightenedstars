@@ -1,14 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { blurPlaceholder } from '../utils/imageLoader';
 
 export default function CarouselClient({ brands, title, locale }: { brands: any[], title: string, locale: string }) {
   if (!brands || brands.length === 0) return null;
 
-  // We duplicate the array to allow for seamless infinite scrolling
-  const scrollBrands = [...brands, ...brands, ...brands, ...brands];
+  // Only duplicate once for seamless loop
+  const scrollBrands = [...brands, ...brands];
   const isRTL = locale === 'ar';
 
   return (
@@ -22,10 +21,9 @@ export default function CarouselClient({ brands, title, locale }: { brands: any[
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-900 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-900 to-transparent z-10 pointer-events-none" />
         
-        <motion.div 
-          className="flex items-center w-max"
-          animate={{ x: isRTL ? ["-50%", "0%"] : ["0%", "-50%"] }}
-          transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+        <div 
+          className={`flex items-center w-max ${isRTL ? 'animate-marquee-rtl' : 'animate-marquee'}`}
+          style={{ willChange: 'transform' }}
         >
           {scrollBrands.map((brand, i) => (
             <div key={`${brand.id}-${i}`} className="mx-12 shrink-0 flex items-center justify-center w-40 h-24">
@@ -42,9 +40,8 @@ export default function CarouselClient({ brands, title, locale }: { brands: any[
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 }
-

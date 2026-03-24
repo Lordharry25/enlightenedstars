@@ -2,7 +2,7 @@
   "Navigation": {
     "home": "Home",
     "about": "About Us",
-    "products": "Products Gallery",
+    "products": "Product Catalog",
     "contact": "Contact Us",
     "admin": "Admin Panel"
   },
@@ -10,22 +10,38 @@
     "heroTitle": "Premium FMCG Wholesale Suppliers",
     "heroSubtitle": "Reliable supply chain solutions for dark stores and quick commerce.",
     "featuredBrands": "Brands We Supply",
-    "featuredProducts": "Featured Products"
+    "featuredProducts": "Featured Products",
+    "exploreCta": "Explore Our Products",
+    "b2bOnly": "B2B Only",
+    "viewDetails": "View Details",
+    "viewAll": "View All Products"
   },
   "About": {
     "title": "About Our Company",
+    "subtitle": "We are building the future of smart FMCG distribution, connecting global manufacturers to local B2B markets with ultimate efficiency.",
     "history": "Company History",
     "historyText": "Established to bridge the gap in rapid FMCG distribution.",
+    "historyExtra": "Through scalable global sourcing and highly optimized logistics, we consistently deliver top tier products exactly when you need them.",
     "vision": "Our Vision",
     "visionText": "To be the backbone of quick commerce supply chains globally.",
     "mission": "Our Mission",
-    "missionText": "Delivering high-quality imported goods with unmatched reliability."
+    "missionText": "Delivering high-quality imported goods with unmatched reliability.",
+    "yearsLabel": "Years of Excellence"
   },
   "Products": {
-    "title": "Product Gallery",
-    "searchPlaceholder": "Search products...",
+    "title": "Product Catalog",
+    "subtitle": "Browse our comprehensive B2B catalog of global FMCG brands. Please contact us for wholesale pricing requirements.",
+    "searchPlaceholder": "Search B2B products...",
     "category": "Category",
-    "noPrices": "Contact us for wholesale pricing"
+    "allCategories": "All Categories",
+    "search": "Search",
+    "noPrices": "Contact us for wholesale pricing",
+    "noProducts": "No products found",
+    "noProductsHint": "Try adjusting your search query or filters.",
+    "clearFilters": "Clear Filters",
+    "prev": "Previous",
+    "next": "Next",
+    "pageOf": "Page {current} of {total}"
   },
   "Contact": {
     "title": "Contact Us",
@@ -33,6 +49,33 @@
     "company": "Company Name",
     "email": "Email Address",
     "message": "Message / RFQ",
-    "submit": "Send Inquiry"
+    "submit": "Send Inquiry",
+    "formTitle": "Send an Inquiry",
+    "namePlaceholder": "John Doe",
+    "companyPlaceholder": "Acme Corp",
+    "messagePlaceholder": "How can we help you? RFQ details...",
+    "hqTitle": "Headquarters & Warehouses",
+    "salesTitle": "Sales & Support",
+    "emailTitle": "Email Addresses"
+  },
+  "Footer": {
+    "description": "Leading B2B FMCG supplier globally. We deliver high-quality products to empower your business.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "rights": "All rights reserved."
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry": "Try Again",
+    "goHome": "Go to Homepage"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "goHome": "Go to Homepage"
+  },
+  "Loading": {
+    "text": "Loading..."
   }
 }
