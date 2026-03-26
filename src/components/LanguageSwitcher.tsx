@@ -25,16 +25,16 @@ export default function LanguageSwitcher() {
       {locale === 'en' ? (
         <button
           onClick={() => handleLocaleChange('ar')}
-          className="px-3 py-1 text-sm font-medium rounded-md transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200"
+          className="px-3 py-1 text-sm font-medium rounded-md transition-colors bg-primary text-white hover:bg-blue-800"
         >
           عربي
         </button>
       ) : (
         <button
           onClick={() => handleLocaleChange('en')}
-          className="px-3 py-1 text-sm font-medium rounded-md transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200"
+          className="px-3 py-1 text-sm font-medium rounded-md transition-colors bg-primary text-white hover:bg-blue-800"
         >
-          EN
+          English
         </button>
       )}
     </div>
