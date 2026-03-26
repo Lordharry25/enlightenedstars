@@ -22,26 +22,21 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="flex items-center gap-2">
-      <button
-        onClick={() => handleLocaleChange('en')}
-        className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
-          locale === 'en'
-            ? 'bg-primary text-white'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-      >
-        EN
-      </button>
-      <button
-        onClick={() => handleLocaleChange('ar')}
-        className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
-          locale === 'ar'
-            ? 'bg-primary text-white'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-      >
-        عربي
-      </button>
+      {locale === 'en' ? (
+        <button
+          onClick={() => handleLocaleChange('ar')}
+          className="px-3 py-1 text-sm font-medium rounded-md transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200"
+        >
+          عربي
+        </button>
+      ) : (
+        <button
+          onClick={() => handleLocaleChange('en')}
+          className="px-3 py-1 text-sm font-medium rounded-md transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200"
+        >
+          EN
+        </button>
+      )}
     </div>
   );
 }
