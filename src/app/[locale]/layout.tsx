@@ -15,12 +15,12 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       template: isAr ? '%s | إنلايتند ستارز' : '%s | EnlightenedStars Ltd.',
     },
     description: t('heroSubtitle'),
-    keywords: ['FMCG', 'B2B', 'wholesale', 'suppliers', 'Dubai', 'UAE', 'import', 'distribution', 'quick commerce'],
+    keywords: ['FMCG', 'B2B', 'wholesale', 'suppliers', 'Riyadh', 'Saudi Arabia', 'import', 'distribution', 'quick commerce'],
     openGraph: {
       title: isAr ? 'إنلايتند ستارز' : 'EnlightenedStars Ltd.',
       description: t('heroSubtitle'),
       type: 'website',
-      locale: locale === 'ar' ? 'ar_AE' : 'en_US',
+      locale: locale === 'ar' ? 'ar_SA' : 'en_US',
       siteName: 'EnlightenedStars Ltd.',
     },
     twitter: {

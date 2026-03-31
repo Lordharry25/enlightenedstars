@@ -54,7 +54,7 @@
     "companyPlaceholder": "Acme Corp",
     "messagePlaceholder": "How can we help you? RFQ details...",
     "hqTitle": "Headquarters & Warehouses",
-    "hqDetails": "123 Logistics Park, JAFZA\nDubai, United Arab Emirates",
+    "hqDetails": "Al Hussein Bin Ali St, Riyadh\nSaudi Arabia",
     "salesTitle": "Sales & Support",
     "phoneDetails": "Mobile: 0597832290\nSyed Safeer - Commercial Director",
     "emailTitle": "Email Addresses",
@@ -64,6 +64,7 @@
     "description": "Leading B2B FMCG supplier globally. We deliver high-quality products to empower your business.",
     "quickLinks": "Quick Links",
     "contactUs": "Contact Us",
+    "address": "Al Hussein Bin Ali St, Riyadh, Saudi Arabia",
     "rights": "All rights reserved."
   },
   "Error": {

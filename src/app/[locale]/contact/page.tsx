@@ -103,7 +103,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
             <div className="relative z-10 mt-12 w-full h-72 rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
               <div className="absolute inset-0 bg-blue-900/20 mix-blend-overlay pointer-events-none group-hover:bg-transparent transition-colors z-20"></div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115370.92548858277!2d54.9961623868612!3d25.04576378419614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f1011cdba73fd%3A0xe54261899eafaee7!2sJebel%20Ali%20Free%20Zone%20-%20Dubai!5e0!3m2!1sen!2sae!4v1718000000000!5m2!1sen!2sae"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200427.60838128537!2d46.51862143003057!3d24.725455611183177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sae!4v1718000000000!5m2!1sen!2sae"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

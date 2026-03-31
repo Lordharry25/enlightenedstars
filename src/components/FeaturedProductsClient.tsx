@@ -65,7 +65,7 @@ export default function FeaturedProductsClient({ products, title, locale }: { pr
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   placeholder="blur"
                   blurDataURL={blurPlaceholder}
-                  className="object-contain p-4 group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                  className="object-contain m-[5px] p-[5px] !w-[calc(100%-10px)] !h-[calc(100%-10px)] rounded-[10px] group-hover:scale-110 transition-transform duration-700 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>

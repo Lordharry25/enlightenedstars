@@ -43,13 +43,13 @@ export default async function Home({ params: { locale } }: { params: { locale: s
     url: 'https://enlightenedstars.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '123 Logistics Park, JAFZA',
-      addressLocality: 'Dubai',
-      addressCountry: 'AE',
+      streetAddress: 'Al Hussein Bin Ali St',
+      addressLocality: 'Riyadh',
+      addressCountry: 'SA',
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+971-4-123-4567',
+      telephone: '+966-59-783-2290',
       contactType: 'sales',
     },
   };
